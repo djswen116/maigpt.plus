@@ -918,65 +918,6 @@
             </div>
         </div>
     </div>
-    
-   <div id="custom-alert-modal" class="modal-overlay">
-      <div class="modal-content">
-        <p class="message">如遇充值失败请点多几次或晚点再试，或者找客服协助！9:00-23:59都在线！</p>
-        <p class="timer-text">将在 <strong id="modal-timer">10</strong> 秒后进代充系统...</p>
-      </div>
-    </div>
-
-    <script>
-        // 等待DOM完全加载后执行脚本
-        document.addEventListener('DOMContentLoaded', function() {
-    
-            // 通过链接地址精确选择“24小时代充系统”按钮
-            const rechargeLink = document.querySelector('a[href="5"]');
-    
-            // 获取弹窗和计时器元素
-            const modal = document.getElementById('custom-alert-modal');
-            const timerSpan = document.getElementById('modal-timer');
-    
-            // 确保按钮存在，以防万一
-            if (rechargeLink) {
-                // 为按钮添加点击事件监听器
-                rechargeLink.addEventListener('click', function(event) {
-                    
-                    // 1. 阻止链接的默认跳转行为
-                    event.preventDefault();
-                    
-                    const destinationUrl = this.href;
-    
-                    // 2. 显示弹窗
-                    if (modal) {
-                        modal.classList.add('visible');
-                    }
-    
-                    let timeLeft = 10; // 倒计时10秒
-                    if (timerSpan) {
-                       timerSpan.textContent = timeLeft;
-                    }
-    
-                    // 3. 启动计时器，每秒更新显示的数字
-                    const countdownInterval = setInterval(() => {
-                        timeLeft--;
-                        if (timerSpan) {
-                            timerSpan.textContent = timeLeft;
-                        }
-                        // 倒计时结束后清除计时器
-                        if (timeLeft <= 0) {
-                            clearInterval(countdownInterval);
-                        }
-                    }, 1000);
-    
-                    // 4. 设置一个20秒后执行的延时操作，用于跳转
-                    setTimeout(() => {
-                        window.location.href = destinationUrl;
-                    }, 10000); // 10000毫秒 = 10秒
-                });
-            }
-        });
-    </script>
     <footer class="site-footer" style="text-align: center; padding: 15px 15px; margin-top: 20px; color: rgba(255, 255, 255, 0.7); font-size: 20px;">
     <p style="margin: 0;">© 2024 . 本站仅提供Chat.Gpt Plus 充值服务.与 Open.AI公司无关联关系</p>
 </footer>
