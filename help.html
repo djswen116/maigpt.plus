@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet">
     <title>Chat.Gpt Plus 会员自助充值指南</title>
     <style>
         /* --- 全局样式 --- */
@@ -91,6 +93,103 @@
             display: block;
         }
 
+        .guide-carousel {
+            max-width: 760px;
+            position: relative;
+            margin: 20px auto 28px;
+        }
+
+        .guide-carousel-track {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            border: 1px solid #d9e4f2;
+            border-radius: 12px;
+            background: #f8fbff;
+            padding: 10px;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .guide-carousel-track::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .guide-carousel-track::-webkit-scrollbar-thumb {
+            background: #c9d8ea;
+            border-radius: 999px;
+        }
+
+        .guide-slide {
+            flex: 0 0 100%;
+            margin: 0;
+            scroll-snap-align: center;
+        }
+
+        .guide-carousel-image {
+            width: 100% !important;
+            max-height: none !important;
+            height: auto !important;
+            margin: 0 auto !important;
+            border: 0 !important;
+            border-radius: 8px !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            object-fit: contain !important;
+        }
+
+        .guide-carousel-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            width: 38px;
+            height: 38px;
+            border: 1px solid #c9d8ea;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.94);
+            color: #1a202c;
+            font-size: 24px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+            transform: translateY(-50%);
+        }
+
+        .guide-carousel-btn:hover {
+            background: #edf4ff;
+        }
+
+        .guide-carousel-prev {
+            left: -14px;
+        }
+
+        .guide-carousel-next {
+            right: -14px;
+        }
+
+        @media (max-width: 640px) {
+            .guide-carousel {
+                max-width: 100%;
+            }
+
+            .guide-carousel-track {
+                padding: 8px;
+            }
+
+            .guide-carousel-prev {
+                left: 4px;
+            }
+
+            .guide-carousel-next {
+                right: 4px;
+            }
+        }
+
         /* --- 特殊区块样式 (如密钥提示、联系方式) --- */
         .info-box, .contact-box {
             background-color: #f7fafc;
@@ -102,6 +201,22 @@
         
         .info-box strong {
             color: #c53030;
+        }
+
+        .urgent-note {
+            margin: -4px 0 28px;
+            padding: 14px 18px;
+            color: #b42318;
+            background: #fff5f5;
+            border: 1px solid #feb2b2;
+            border-left: 5px solid #e53e3e;
+            border-radius: 10px;
+            font-weight: 700;
+            line-height: 1.8;
+        }
+
+        .urgent-note strong {
+            color: #9b1c1c;
         }
 
         .contact-box {
@@ -188,15 +303,18 @@
         }
 
     </style>
+  <link rel="stylesheet" href="assets/professional.css?v=help-more-service-20260531">
 </head>
-<body>
+<body class="guide-page">
+<div class="subpage-topbar"><a class="subpage-brand" href="index.html">文文 Gpt</a><nav><a href="index.html">首页</a><a href="https://qfcc99.com/shop/gptplus" target="_blank" rel="noopener noreferrer nofollow">商品购买</a><a href="gpt170.html">价格说明</a><a href="index.html#contact" data-contact-qr-open>联系客服</a></nav></div>
+
 
     <div class="container">
         <h1>Chat.Gpt Plus 会员自助充值指南</h1>
         <p style="text-align: center; color: #718096;">
             欢迎使用我们的24小时自助充值系统！本指南将引导您轻松完成。
             <br>
-            您也可以观看我们网站首页的<a href="https://maigpt.plus/#video" target="_blank"><strong>3分钟视频教程</strong></a>，快速了解所有步骤。<br>请牢记我们的网址：<a href="https://maigpt.plus" target="_blank">maigpt.plus</a>防失联
+            您也可以观看我们网站首页的<a href="https://gptplus.plus/#video" target="_blank"><strong>3分钟视频教程</strong></a>，快速了解所有步骤。<br>请牢记我们的网址：<a href="https://gptplus.plus" target="_blank">gptplus.plus</a>防失联
         </p>
 
         <nav class="nav-bar">
@@ -209,27 +327,29 @@
 
         <hr>
 
-        <h2 id="steps">第一步：购买充值卡密(因官方新规，已调价至170元，请知悉)</h2>
-        <p>在开始之前，您需要先从我们的网站获取一张充值卡密(因官方新规，已调价至170元，请知悉)。</p>
+        <h2 id="steps">第一步：购买充值卡密(因官方新规+ID货源紧张，已调价至180元，请知悉)</h2>
+        <p>在开始之前，您需要先从我们的网站获取一张充值卡密(因官方新规+ID货源紧张，已调价至180元，请知悉)。</p>
         <ol>
-            <li>访问我们的网站：<a href="https://maigpt.plus" target="_blank">https://maigpt.plus</a></li>
-            <li>点击首页的 <a href="https://sc.dtyuedan.cn/shop/maigptplus" target="_blank"><strong>“卡密自助购买”</strong></a> 按钮。</li>
-             <img src="help/01.png" alt="网站首页，突出“卡密自助购买”按钮">
+            <li>访问我们的网站：<a href="https://gptplus.plus" target="_blank">https://gptplus.plus</a></li>
+            <li>点击首页的 <a href="https://qfcc99.com/shop/gptplus" target="_blank"><strong>“卡密自助购买”</strong></a> 按钮。</li>
+             <img src="help/01.png?v=home-card-20260531" alt="网站首页，突出“卡密自助购买”按钮">
             <li>按照页面提示选择您需要的服务并完成购买。</li>
         </ol>
-        <img src="help/02.png" alt="卡密购买130">
-        <img src="help/03.png" alt="确认付款">
-        <img src="help/04.png" alt="确认支付">
-        <img src="help/05.png" alt="支付二维码">
-        <img src="help/06.png" alt="复制卡密">
+        <img src="help1/h05.png?v=product-select-20260531" alt="选择 GPT 自助卡密商品">
+        <img src="help1/h02.png" alt="卡密购买180">
+      <p>点击去支付，这里可以选微信也可以选支付宝支付</p>
+      <p>支付成功后等待几秒出现下面的卡密和使用说明</p>
+        <p>按使用说明中的指引使用操作就可！</p>
+        <img src="help1/h03.png" alt="成功购买">
         <hr>
 
         <h2>第二步：进入自助充值系统</h2>
         <p>获取卡密后，请返回网站首页，开始自助充值流程。</p>
         <ol>
-            <li>再次访问网站首页：<a href="https://maigpt.plus" target="_blank">https://maigpt.plus</a></li>
+            <li>再次访问网站首页：<a href="https://gptplus.plus" target="_blank">https://gptplus.plus</a></li>
             <li>点击 <strong>“24小时代充系统”</strong>。</li>
-             <img src="help/07.png" alt="24小时代充">
+             <img src="help1/h01.png?v=recharge-system-20260531" alt="24小时代充系统入口">
+              <li>为保障供应尽量不断，有时会备用多个渠道，请按卡密选择对应充值系统！</li>
             <li>将您在第一步中购买的卡密粘贴到指定位置。</li>
         </ol>
         <img src="help/08.png" alt="将购买的卡密粘贴到输入框">
@@ -271,44 +391,62 @@
         </ol>
         <img src="help/13.png" alt="核对账号">
         <img src="help/14.png" alt="确认充值">
-        <p>充值成功后，您的会员状态将显示为通过 iOS 订阅。</p>
-   <img src="help/15.png" alt="显示通过 App Store 订阅成功">
+        <p>提示充值成功后，刷新一下 GPT 首页就出来会员了。如果没出来的话，请按以下步骤操作</p>
+   <div class="guide-carousel" data-guide-carousel>
+       <button class="guide-carousel-btn guide-carousel-prev" type="button" aria-label="上一张">‹</button>
+       <div class="guide-carousel-track">
+           <figure class="guide-slide">
+               <img class="guide-carousel-image" src="help/app-store-warning-slide-1.jpg?v=20260708-cut3" alt="刷新后未显示 Plus 的处理步骤 1">
+           </figure>
+           <figure class="guide-slide">
+               <img class="guide-carousel-image" src="help/app-store-warning-slide-2.jpg?v=20260708-cut3" alt="刷新后未显示 Plus 的处理步骤 2">
+           </figure>
+           <figure class="guide-slide">
+               <img class="guide-carousel-image" src="help/app-store-warning-slide-3.jpg?v=20260708-cut3" alt="刷新后未显示 Plus 的处理步骤 3">
+           </figure>
+       </div>
+       <button class="guide-carousel-btn guide-carousel-next" type="button" aria-label="下一张">›</button>
+   </div>
         
         <hr>
 
         <h2 id="faq">关于我们 & 常见问题</h2>
         
-     <h3>问：为什么你们的之前你们的价格比官方更低？现在比官网更高？</h3>
-        <p>答：之前我们利用了部分国家（如尼日利亚等）在App Store上的定价差异，能够以更优惠的汇率成本，为大家提供服务。</p>
-         <p>GPT官网9月16号新规,已不存在低价国家，价格已调整！价格构成（20美金约145元+苹果ID磨损+人工维护等成本，<strong>追求低价，注意黑卡和封号等风险！</strong>）</p>
-    <a href="gpt170" target="_blank" rel="noopener noreferrer">点击查看新规</a>
+     <h3>问：为什么你们的价格比官网要更高？</h3>
+         <p>价格构成（20美金加充卡手续费约145元+苹果ID或卡成本+磨损+服务器、设备、人工、稳定保障等成本)<strong>追求低价，注意黑卡和封号等风险！</strong>）</p>
+    <a href="gpt170.html" target="_blank" rel="noopener noreferrer">点击查看价格说明和服务口碑</a>
 
         <h3>问：这种充值方式安全吗？会被封号吗？</h3>
-        <p>答：<strong>非常安全稳定。</strong>我们后台对接的是苹果正规支付，是目前最稳的充值方式。只获取临时授权密钥完成充值操作，不获取密码。<strong>迄今为止2年时间，因充值方式导致的封号记录为0。</strong></p>
+        <p>答：<strong>非常安全稳定。</strong>我们所有充值均采用一卡一绑或者一ID一付，稳定性拉满！只获取临时授权密钥完成充值操作，不获取密码。<strong>迄今为止2年时间，因充值方式导致的封号记录为0。</strong></p>
 
-        <h3>问：如果遇到官方大封号等不可控因素，你们还有质保么？</h3>
-        <p>答：只要封号不问理由，按天退款！让你使用无忧！其他同行的大封号不保，普号不保，共享滥用不保（这也不保，那也不保），在我们这里通通都保！<strong>只有稳定，才敢这么保证！</strong></p>
-        <img src="help/zb.png" alt="给力质保">
         <h3>问：提示充值失败，重新提交怎么办？</h3>
         <p>答：偶遇充值失败或卡住，是太多人同时用通道拥挤，多点几次或晚点再试（提示会员的等会员到期再充），有问题随时联系客服处理（15小时人工在线：9:00-24:00）<strong>请放心，卡密没有充值成功前都不会失效！</strong></p>
         <h3>问：提示充值成功后，没到账plus怎么办？</h3>
-        <p>答：请确认好邮箱再点充值，防止串号(充值成功后，GPT官网没有退款入口！)，正常充值都是秒到或几分钟内到！<strong>如果遇到延迟，获取plus那里点到底，报错后再刷新就出来了！</strong></p>
+         <p>答：请确认好邮箱再点充值，防止串号(充值成功后，GPT官网没有退款入口！)，正常充值都是三到十分钟内到！<strong>如果遇到延迟，获取plus那里点到底（如果还跳IOS报错再点左边），报错或者无反应，再回聊天页刷新就出来了！</strong></p>
          <img src="help/plus.png" alt="获取plus">
+         <img id="app-store-ios-warning" src="help/app-store-ios-warning.png?v=20260708" alt="App Store 订阅报错处理">
+         <div id="recharge-warning-note" class="urgent-note">
+             <strong>重要提醒：</strong>禁止马上用其他卡密和渠道去充值！以免覆盖充值，售后麻烦！请按以上步骤操作，或及时找客服协助！
+         </div>
         
         <hr>
 
         <h2 id="contact">联系我们 & 更多服务</h2>
         <p>充值过程中遇到任何问题，有其他业务需求，请联系我们。</p>
-         <p>请保存我们网址maigpt.plus ，加上我们联系方式，防止失联！</p>
+         <p>请保存我们网址gptplus.plus ，加上我们联系方式，防止失联！</p>
          <div class="contact-box">
-             <p style="margin-top: 0;">防失联请加上微信</p>
-             <code>maigptplus</code>
+             <p style="margin-top: 0;">防失联客服 QQ/微信同号</p>
+             <code>82765536</code>
              <p style="margin-bottom: 0; font-size: 0.9em; color: #718096;">
-                  添加好友备注：<strong>Gpt代充</strong><br>
+                  添加好友请备注：<strong>Gpt代充</strong><br>
+                  (加的人多，急事请先Q，微信防频繁通过慢！)
              </p>
               <img src="image/weixin.png" alt="防失联微信">
          </div>
-         <p>可接Gpt pro和Grok成品号业务，详情找客服！</p>
+         <div class="more-service-card">
+             <p>除 Chat.Gpt Plus 外，也可下单 Chat.Gpt Pro、Grok、Claude、Gemini 等订阅服务。</p>
+             <a class="purchase-link" href="https://qfcc99.com/shop/gptplus" target="_blank" rel="noopener noreferrer nofollow">点击卡网下单</a>
+         </div>
     </div>
 
     <a id="backToTopBtn" href="#">返回<br>顶部</a>
@@ -327,7 +465,24 @@
                 mybutton.style.display = "none";
             }
         }
+
+        document.querySelectorAll('[data-guide-carousel]').forEach(function(carousel) {
+            var track = carousel.querySelector('.guide-carousel-track');
+            var prev = carousel.querySelector('.guide-carousel-prev');
+            var next = carousel.querySelector('.guide-carousel-next');
+
+            function move(direction) {
+                track.scrollBy({
+                    left: direction * track.clientWidth,
+                    behavior: 'smooth'
+                });
+            }
+
+            prev.addEventListener('click', function() { move(-1); });
+            next.addEventListener('click', function() { move(1); });
+        });
     </script>
 
+  <script src="assets/contact-modal.js?v=20260531-contact-modal-v2"></script>
 </body>
 </html>
